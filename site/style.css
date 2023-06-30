@@ -1,0 +1,590 @@
+    /* Your CSS styles here */
+    , html {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #2a2a2a; /* Catppuccin Mocha background color */
+      color: #d4be98; /* Catppuccin Mocha foreground color */
+      width:1827px;
+    /* Body */
+ 
+ 
+    }
+/* Body */
+body{
+  width:1827px;
+  margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background-color: #2a2a2a; /* Catppuccin Mocha background color */
+      color: #d4be98; /* Catppuccin Mocha foreground color */
+      padding-left:278px;
+      /* Body */
+ 
+ 
+    }
+ 
+ 
+   
+head {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  color: #cdd6f4;
+  background-color: #181825;
+  opacity: 0.5;
+  border-radius: 29px;
+  border: 1px solid #aec1ff;
+  padding: 29px;
+
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #181825;
+  border: 2px solid #aec1ff;
+  padding: 10px;
+  margin: 0;
+  border-radius: 29px;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 10px;
+}
+
+nav ul li a {
+  color: #cdd6f4;
+  text-decoration: none;
+}
+
+main {
+  flex: 2 0 auto;
+  padding: 20px;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: auto;
+  padding: 12px;
+}
+
+footer {
+  flex-shrink: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #cdd6f4;
+  background-color: #181825;
+  padding: 15px;
+  border: 1px solid #aec1ff;
+  text-align: center;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Change to 3 columns for larger boxes */
+  grid-template-rows: repeat(3, 1fr); /* Change to 3 rows for larger boxes */
+  gap: 9px;
+  padding: 20px;
+  width: min-content; /* Set a width for the grid */
+  margin: 20; /* Center the grid */
+  height: min-content;
+}
+
+.grid-item {
+  opacity: 100%;
+  padding: 10px; /* Add some padding */
+  background-color: #3c3836; /* Catppuccin Mocha color */
+  color: #d4be98; /* Catppuccin Mocha foreground color */
+  border: 1px solid #504945; /* Catppuccin Mocha color */
+  height: 300px;
+  width:  600px;
+  position: sticky;
+ 
+}
+
+.box1 {
+  background-color: #181825;
+  color: #cdd6f4;
+  border: 1px solid #aec1ff;
+  grid-column: 3;
+      grid-row: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 17px;
+      height: auto;
+  width: auto;
+}
+
+.box2 {
+  background-color: #282c34;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  grid-column: 3;
+  grid-row: -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  height: 320px;
+  width: 320px;
+
+}
+
+
+
+.box3 {
+  background-color: #181825;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  grid-column: 2,3;
+  grid-row:  2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  height:auto;
+  width: auto;
+}
+
+.box4 {
+  background-color: #282c34;
+  color: #cdd6f4;
+  border: 1px solid #aec1ff;
+  display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 17px;
+      grid-column: 2;
+      grid-row: 2;
+      height: auto;
+      width: auto;
+      
+      
+}
+
+.box5 {
+  background-color: #20232a;
+  color: #cdd6f4;
+  border: 1px solid #aec1ff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  grid-column: 2;
+  grid-row: 2 / 2;
+  height: auto;
+  width: auto;
+  }
+
+.box6 {
+  background-color: #181825;
+  color: #cdd6f4;
+  border: 1px solid #61dafb;
+  display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 17px;
+      grid-column: 2;
+      grid-row: 4;
+      height: auto;
+    width: auto;
+}
+.box7 {
+  background-color: #181825;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  display: flex;
+  grid-column: 2;
+  align-items: center;
+  grid-row: 3;
+  display: flex;
+  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 3;
+    width: 300px;
+  border-radius: 17px;
+  
+}
+
+.box7 img {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  border-radius: 29px;
+}
+
+.box7 a {
+  color: #d4be98; /* Catppuccin Mocha foreground color */
+  text-decoration: none;
+  
+}
+
+
+.box8 {
+  background-color: #181825;
+  color: #61dafb;
+  border: 1px solid #61dafb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 17px;
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.box8 img {
+  width: 100%; /* or another value */
+  height: 100%;
+  object-fit: cover; /* or another value */
+}
+
+.calendar {
+  width: 300px;
+  font-family: Arial, sans-serif;
+  background-color: #181825;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.month {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.prev-checkbox,
+.next-checkbox {
+  display: none;
+}
+
+.prev-label,
+.next-label {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  text-decoration-color: #20232a;
+}
+
+.prev-btn{
+  display: right;
+  padding: 5px 10px;
+  background-color: #20232a;
+  border-radius: 3px;
+}
+}
+.next-btn {
+  display: left;
+  padding: 5px 10px;
+  background-color: #20232a;
+  border-radius: 3px;
+}
+
+.prev-checkbox:checked ~ .prev-label{
+left: auto;
+pointer-events: none;
+  opacity: 0.5;
+}
+.next-checkbox:checked ~ .next-label {
+  
+  display: left;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.weekdays div {
+  text-align: center;
+  padding: 5px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.days div {
+  text-align: center;
+  padding: 5px;
+}
+
+.highlight {
+  background-color: #61dafb; /* Customize the highlight color */
+}
+
+
+
+
+forecast {
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: #FFF;
+  font-smooth:always;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 0 1px rgba(0,0,0,0.3);
+  font-weight: lighter;
+  background-image: url("http://wallpoper.com/images/00/44/66/90/aero-green-and-dark-blue_00446690.jpg");
+}
+
+#area {
+  width: 400px;
+  height: 700px;
+  position: absolute;
+  left: 50%;
+  top: 30%; 
+  margin-left: -200px;
+  margin-top: -150px;
+  position: absolute;
+}
+
+.shape {
+    background-color:rgba(0,0,0,0.5);
+                margin: 10px;
+     -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+          border-radius: 4px;
+}
+
+#one {
+  height: 150px;
+}
+#two {
+  height: 220px;
+}
+#three {
+  height: 220px;
+}
+
+.upper {
+  padding: 20px;
+  font-size: 22px;
+}
+
+hr {
+  margin: -20px 20px 0 20px;
+  position: relative;
+  width: auto;
+}
+
+.dotted {
+  position: relative;
+  margin-top: 80px;
+  
+  height: 1px;
+  border: 0;
+  background: #FFF;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255,255,255,0.5)), to(rgba(255,255,255,0.5)), color-stop(50%, #FFF));
+  border-style: dotted;
+}
+
+#left  {
+  font-size: 22px;
+  position:relative;
+  top: -15px;
+  padding: 5px;
+  display: inline-block;
+  width: 90px;
+}
+#center {
+  display: inline-block;
+}
+#center > * {
+  text-align: center;
+}
+#place {
+  font-size: 22px;
+}
+#right {
+  font-size: 22px;
+  position:relative;
+  top: -15px;
+  padding: 5px;
+  display: inline-block;
+  text-align: right;
+  width: 90px;
+}
+
+.vertical-line {
+  border-right: 1px dotted rgba(255,255,255,0.5);
+  height: 100%;
+  
+}
+#upper-one {
+  height: 50px;
+  left:0;
+  right:0;
+}
+.day {
+  padding: 0 20px;
+  line-height: 40px;
+  text-align: center;
+  display: inline-block;
+  width: 50px;
+  height: 80px;
+}
+.day:first-child {
+  padding-left:24px;
+}
+
+.lower {
+  padding: 20px;
+}
+
+.day > div {
+  font-size: 12px;
+  padding: 0px;
+  text-align: center;
+}
+
+.wind {
+  display: inline-block;
+  width: 100px;
+  margin-top: -100px;
+}
+#cloudy .icon-cloud{
+  font-size: 90px;
+}
+#windy {
+  position:relative;
+  top: -30px;
+}
+#bary {
+  position:relative;
+  width: 113px;
+  top: 30px;
+  text-align: right;
+}
+
+
+#meter {
+  position:relative;
+  width: 20px;
+  float: right;
+  margin: 0px 13px 10px 0;
+}
+#meter > hr {
+  margin: 7px;
+}
+
+#half-circle{
+     margin-top: 10px;
+     margin-left: 40px;
+     height:100px;
+     width:200px;
+     border-top: 2px dashed rgba(255,255,255,0.5);
+     border-right: 2px dashed rgba(255,255,255,0.5);
+     border-left: 2px dashed rgba(255,255,255,0.5);
+     border-radius: 200px 200px 0 0;
+     -moz-border-radius: 200px 200px 0 0;
+     -webkit-border-radius: 100px 100px 0 0;
+}
+#underline {
+  height: 1px;
+  border: 0;
+  background: #FFF;
+  background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(255,255,255,0.5)), to(rgba(255,255,255,0.5)), color-stop(50%, #FFF));
+  margin-bottom: 10px;
+}
+
+#moony {
+  width: 100px;
+  float: right;
+  margin-top: -120px;
+}
+.icon-adjust {
+  font-size: 38px;
+}
+#moony-text{
+  text-align: right;
+  float:right;
+}
+#sun-rise {
+  margin-left: 40px;
+}
+
+#sun-set {
+  margin-left: 140px;
+}
+..calculator {
+  width: 100%; /* Updated: Change width to 100% */
+  height: 100%; /* Updated: Change height to 100% */
+  background-color: #181825;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  display: flex; /* Added: Use flexbox for layout */
+  flex-direction: column; /* Added: Set flex-direction to column */
+}
+
+.display {
+  width: 100%;
+  height: 29%;
+  font-size: 20px;
+  text-align: right;
+  margin-bottom: 1px;
+  padding: 1px;
+  background-color: #181825;
+  color: #cdd6f4;
+  border-radius: 3px;
+}
+
+.buttons {
+  flex: 1; /* Added: Use flex: 1 to make buttons fill remaining space */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.btn {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+  background-color: #20232a;
+  border: none;
+  border-radius: 1px;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+.btn.operator {
+  background-color: #ff8800;
+}
+
+.btn.equal {
+  background-color: #00cc00;
+}
+
+.btn.clear {
+  background-color: #cc0000;
+}

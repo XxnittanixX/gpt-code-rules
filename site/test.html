@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Boxes</title>
+
+</head>
+
+<section>
+  <div class="section">
+    
+      <div class="grid-container" id="grid-container">
+        <div class="grid-item box1"> 
+          
+            
+          <div class="calendar">
+            <div class="month">June 2023</div>
+            <input id="prev-checkbox" class="prev-checkbox" type="checkbox"> 
+            <input id="next-checkbox" class="next-checkbox" type="checkbox">
+            <label class="prev-label" for="prev-checkbox"><span class="prev-btn">Previous</span></label>
+            <label class="next-label" for="next-checkbox"><span class="next-btn">Next</span></label>
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days">
+              <!-- Days will be generated dynamically with JavaScript -->
+            </div>
+          </div>            
+
+          
+
+          
+        </div>
+        <div class="grid-item box2">Box 2
+          <input type="image" src="Icons/files.png" alt="Submit" width="45px" height="45px">
+        </div>
+        <div class="grid-item box3" ><input type="text" class="display" readonly>
+          <div class="calculator">
+          
+            <div class="buttons"></div>
+          </div>
+          
+          
+        </div>
+        <div class="grid-item box4">
+
+          
+
+        
+        </div>
+
+        <div class="grid-item box5">Box 5
+          <input type="image" src="Icons/files.png" alt="Submit" width="45px" height="fill">
+        </div>
+        
+        <div class="grid-item box6">
+          <input type="image" src="Icons/files.png" alt="Submit" width="45px" height="45px">  
+          </div>
+        
+          <div class="grid-item box7"> <img src="dashboard/profilepic.jpg" alt="Your Image">
+          <a href="">Your Link</a>
+        </div>
+        
+        
+        
+        
+        <div class="grid-item box8">
+          <input type="image" src="Icons/files.png" alt="Submit" width="45px" height="45px">
+        </div>
+        
+      
+      </div>
+      
+    
+</section>
+
+
+<nav>
+  <ul>
+    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+    <li><a href="about.html"><i class="fas fa-info-circle"></i> About</a></li>
+    <li><a href="socials.html"><i class="fas fa-share-alt-square"></i> Socials</a></li>
+    <li><a href="family.html"><i class="fas fa-user-friends"></i> Family</a></li>
+    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+    <li><a href="https://discord.com"><i class="fab fa-discord"></i> Discord</a></li>
+  </ul>
+</nav>
+
+
+</html>
+
+
+
+
+
+<!--  
+  use this snippet  to add img buttons. 
+  <input type="image" src="PATH TO IMG" alt="img-desc-button" width="W" height="H">
+  
+  
+  ---> 
+
+<script>
+
+// Get the current date
+var currentDate = new Date();
+
+// Set the initial month and year for the calendar
+var currentYear = currentDate.getFullYear();
+var currentMonth = currentDate.getMonth();
+
+// Function to generate the calendar for the current month
+function generateCalendar() {
+  // Find the container for days
+  var daysContainer = document.querySelector('.days');
+  daysContainer.innerHTML = '';
+
+  // Get the number of days in the current month
+  var numDays = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+  // Generate the days
+  for (var i = 1; i <= numDays; i++) {
+    var dayElement = document.createElement('div');
+    dayElement.textContent = i;
+
+    // Add the "highlight" class to the current day
+    if (currentDate.getDate() === i && currentDate.getMonth() === currentMonth) {
+      dayElement.classList.add('highlight');
+    }
+
+    daysContainer.appendChild(dayElement);
+  }
+
+  // Update the month label
+  var monthLabel = document.querySelector('.month');
+  monthLabel.textContent = getMonthName(currentMonth) + ' ' + currentYear;
+}
+
+// Function to get the name of the month
+function getMonthName(monthIndex) {
+  var months = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December'
+  ];
+  return months[monthIndex];
+}
+
+// Function to navigate to the next month
+function nextMonth() {
+  currentMonth++;
+  if (currentMonth > 11) {
+    currentMonth = 0;
+    currentYear++;
+  }
+  generateCalendar();
+}
+
+// Function to navigate to the previous month
+function previousMonth() {
+  currentMonth--;
+  if (currentMonth < 0) {
+    currentMonth = 11;
+    currentYear--;
+  }
+  generateCalendar();
+}
+
+// Add event listeners to the next and previous buttons
+var nextButton = document.querySelector('.next-btn');
+nextButton.addEventListener('click', nextMonth);
+
+var prevButton = document.querySelector('.prev-btn');
+prevButton.addEventListener('click', previousMonth);
+
+// Generate the calendar for the initial month
+generateCalendar();
+</script>
+
+
+
+
+
+
+
+
+<script>
+
+  // Calculator buttons configuration
+const buttonLabels = [
+  '7', '8', '9', '/',
+  '4', '5', '6', '*',
+  '1', '2', '3', '-',
+  '0', '.', '=', '+',
+  ,'Clear'
+];
+
+// Create calculator buttons
+function createCalculatorButtons() {
+  const buttonsContainer = document.querySelector('.buttons');
+
+  buttonLabels.forEach(function (label) {
+    const button = document.createElement('button');
+    button.classList.add('btn');
+    button.textContent = label;
+    buttonsContainer.appendChild(button);
+  });
+}
+
+// Perform calculation
+function calculate() {
+  const display = document.querySelector('.display');
+  const equation = display.value;
+
+  try {
+    const result = eval(equation);
+    display.value = result;
+  } catch (error) {
+    display.value = 'Error';
+  }
+}
+
+// Clear the display
+function clearDisplay() {
+  const display = document.querySelector('.display');
+  display.value = '';
+}
+
+// Add event listeners for button clicks
+function addClickListeners() {
+  const buttons = document.querySelectorAll('.btn');
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const display = document.querySelector('.display');
+      const currentValue = display.value;
+      const clickedValue = this.textContent;
+
+      if (clickedValue === '=') {
+        calculate();
+      } else if (clickedValue === 'Clear') {
+        clearDisplay();
+      } else {
+        display.value = currentValue + clickedValue;
+      }
+    });
+  });
+}
+
+// Initialize the calculator
+function initCalculator() {
+  createCalculatorButtons();
+  addClickListeners();
+}
+
+// Call the initCalculator function on page load
+document.addEventListener('DOMContentLoaded', initCalculator);
+
+</script>

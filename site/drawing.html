@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Drawing App</title>
+    <style>
+        #drawArea {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="drawArea" width="800" height="600"></canvas>
+
+    <script>
+        var canvas = document.getElementById('drawArea');
+        var context = canvas.getContext('2d');
+
+        var drawing = false;
+        var lastPosition = { x: 0, y: 0 };
+
+        canvas.onmousedown = function(e) {
+            drawing = true;
+            lastPosition.x = e.clientX;
+            lastPosition.y = e.clientY;
+        };
+
+        canvas.onmouseup = function() {
+            drawing = false;
+        };
+
+        canvas.onmousemove = function(e) {
+            if (drawing) {
+                context.beginPath();
+                context.moveTo(lastPosition.x, lastPosition.y);
+                context.lineTo(e.clientX, e.clientY);
+                context.stroke();
+
+                lastPosition.x = e.clientX;
+                lastPosition.y = e.clientY;
+            }
+        };
+    </script>
+</body>
+</html>
